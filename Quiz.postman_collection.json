@@ -1,0 +1,279 @@
+{
+	"info": {
+		"_postman_id": "e8569084-a29c-467c-bdcd-8c7af57c1226",
+		"name": "Quiz",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\" : \"h@g.com\",\r\n    \"password\": \"henish1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\" : \"user2\",\r\n    \"email\" : \"u2@g.com\",\r\n    \"password\": \"henish1234\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/users/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"users",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Quiz",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjJlZWExZjE5NzJkMGM2YzNkYjBjNiIsImlhdCI6MTYxNzA5NjY4NH0.GUif-8inC3g4zqDbiwEFmniVh1CSDmSnf224qCbn4V8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": \"Quiz 5\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/quiz/add-quiz",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"add-quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Question",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjJlZWExZjE5NzJkMGM2YzNkYjBjNiIsImlhdCI6MTYxNzM0NTMwOX0.YOab_RCimUZTX2OVAqiQpuJYWGDtvb-6lGE8xT05JrI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quiz\": \"6062f088089cf052acd8cf3f\",\r\n    \"category\": \"GK\",\r\n    \"question\": \"PM of India\",\r\n    \"options\": [{\"value\": \"RaGa\"}, {\"value\": \"NaMo\", \"isCorrect\": true}]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/quiz/add-question",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"add-question"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Quiz",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjJlZWExZjE5NzJkMGM2YzNkYjBjNiIsImlhdCI6MTYxNzM1NjUyOX0.5KAd9x40-sUjq8aoHQfGjNtNwQiPIJi5eduVWN6x5t8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/quiz/all-quiz",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"all-quiz"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get All Questions",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjJlZWExZjE5NzJkMGM2YzNkYjBjNiIsImlhdCI6MTYxNzM1NjUyOX0.5KAd9x40-sUjq8aoHQfGjNtNwQiPIJi5eduVWN6x5t8",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/quiz/all-questions",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"all-questions"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Enroll In Quiz",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjZlNWI3YjgwZjJkMTcwMDU1YjNlYiIsImlhdCI6MTYxNzM1NjIzNH0.fyqvPG3RGEJlKv6I7MRxr65wemq54AtMJwciRlN6aA4",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/quiz/enroll?id=6062f088089cf052acd8cf3f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"enroll"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6062f088089cf052acd8cf3f"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Submit Ans",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjZlNWI3YjgwZjJkMTcwMDU1YjNlYiIsImlhdCI6MTYxNzM1NjIzNH0.fyqvPG3RGEJlKv6I7MRxr65wemq54AtMJwciRlN6aA4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quizId\": \"6062f088089cf052acd8cf3f\",\r\n    \"options\": [\r\n        {\"questionId\": \"6062f2e2c487c24c84462d8a\",\r\n        \"selectedOption\": \"6062f2e2c487c24c84462d8b\" },\r\n        {\"questionId\": \"6062f351c487c24c84462d8d\",\r\n        \"selectedOption\": \"6062f351c487c24c84462d8e\" },\r\n        {\"questionId\": \"6066bb520d9da74e988dba80\",\r\n        \"selectedOption\": \"6066bb520d9da74e988dba81\" },\r\n        {\"questionId\": \"6066bb950d9da74e988dba83\",\r\n        \"selectedOption\": \"6066bb950d9da74e988dba85\" }\r\n    ]\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/quiz/submit",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"submit"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Quiz Response",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYwNjJlZWExZjE5NzJkMGM2YzNkYjBjNiIsImlhdCI6MTYxNzM1NTg1Mn0.G-rhRACGrEJ7HdOIkJxxaWr9AOQTxe1c191iz_WUexg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/quiz/quiz-response?id=6062f088089cf052acd8cf3f",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"quiz",
+						"quiz-response"
+					],
+					"query": [
+						{
+							"key": "id",
+							"value": "6062f088089cf052acd8cf3f"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
